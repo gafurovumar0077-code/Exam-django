@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Authors</title>
+    </head>
+    <body>
+        <h1 class="as">Authors</h1>
+        {% for aut in author %}
+            <div class="fr">
+                <div>
+                    <h1>{{aut.firstname}} {{aut.lastname}}</h1>
+                    <h1>Age: {{aut.age}}</h1>
+                    <h1>Date: {{aut.created_at}}</h1>
+                    <h1>Active: {{aut.is_active}}</h1>
+                </div>
+                <div class="az">
+                    <a class="bt" href="http://127.0.0.1:8000/update_author/{{aut.id}}/">Update</a>
+                    <a class="bt" href="http://127.0.0.1:8000/delete_author/{{aut.id}}/">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="di">
+            <a class="bt" href="http://127.0.0.1:8000/">Home</a>
+        </div>
+    </body>
+</html>

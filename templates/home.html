@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <title>Home</title>
+    </head>
+    <body>
+        <h1 class="as">Library</h1>
+
+        <div class="fr">
+            <h1>Authors</h1>
+            <div class="az">
+                <a class="bt" href="http://127.0.0.1:8000/create_author/">Add author</a>
+                <a class="bt" href="http://127.0.0.1:8000/see_author/">All authors</a>
+            </div>
+        </div>
+
+        <div class="fr">
+            <h1>Books</h1>
+            <div class="az">
+                <a class="bt" href="http://127.0.0.1:8000/create_book/">Add book</a>
+                <a class="bt" href="http://127.0.0.1:8000/show_book/">All books</a>
+            </div>
+        </div>
+
+        <div class="fr">
+            <h1>Orders</h1>
+            <div class="az">
+                <a class="bt" href="http://127.0.0.1:8000/create_order/">Add order</a>
+                <a class="bt" href="http://127.0.0.1:8000/see_order/">All orders</a>
+            </div>
+        </div>
+        <div class="di"><a class="bt" href="http://127.0.0.1:8000/">Home</a></div>
+    </body>
+</html>

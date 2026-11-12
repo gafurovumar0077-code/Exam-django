@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Update book</title>
+    </head>
+    <body>
+        <div class="df">
+            <h1 class="as">Update book</h1>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="book_name" placeholder="Name Book" value="{{books.book_name}}" required>
+                <input type="text" name="caption" placeholder="caption" value="{{books.caption}}" required>
+                <select name="autor" required>
+                    <option value="{{books.autor_id}}">{{books.autor.firstname}} {{books.autor.lastname}}</option>
+                    {% for aut in author %}
+                        <option value="{{aut.id}}">{{aut.firstname}} {{aut.lastname}}</option>
+                    {% endfor %}
+                </select>
+                <input type="file" name="picture">
+                <button class="bt" type="submit">Save</button>
+                <a class="bt" href="http://127.0.0.1:8000/">Home</a>
+
+            </form>
+        </div>
+    </body>
+</html>

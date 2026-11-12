@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Update order</title>
+    </head>
+    <body>
+        <div class="df">
+            <h1 class="as">Update order</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" value="{{order.username}}" required>
+                <input type="text" name="phone" placeholder="Phone" value="{{order.phone}}" required>
+                <select name="books" required>
+                    <option value="{{order.books_id}}">{{order.books.book_name}}</option>
+                    {% for bok in books %}
+                        <option value="{{bok.id}}">{{bok.book_name}}</option>
+                    {% endfor %}
+                </select>
+                <label for="get_at">Get at</label>
+                <input class="in" type="date" name="get_at" id="get_at" value="{{order.get_at|date:'Y-m-d'}}" required>
+                <label for="bring_at">Bring at</label>
+                <input class="in" type="date" name="bring_at" id="bring_at" value="{{order.bring_at|date:'Y-m-d'}}" required>
+                <button class="bt" type="submit">Save</button>
+                <a class="bt" href="http://127.0.0.1:8000/">Home</a>
+
+            </form>
+        </div>
+    </body>
+</html>

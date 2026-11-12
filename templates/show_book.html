@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Books</title>
+    </head>
+    <body>
+        <h1 class="as">Books</h1>
+        {% for bok in book %}
+            <div class="fr">
+                <div class="ds">
+                    <img src="{{bok.picture.url}}" width="200">
+                    <div>
+                        <h1>{{bok.book_name}}</h1>
+                        <h1>{{bok.caption}}</h1>
+                        <h1>Author: {{bok.autor.firstname}} {{bok.autor.lastname}}</h1>
+                        <h1>Date: {{bok.created_at}}</h1>
+                        <h1>Active: {{bok.is_active}}</h1>
+                    </div>
+                </div>
+                <div class="az">
+                    <a class="bt" href="http://127.0.0.1:8000/update_books/{{bok.id}}/">Update</a>
+                    <a class="bt" href="http://127.0.0.1:8000/delete_books/{{bok.id}}/">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="di">
+            <a class="bt" href="http://127.0.0.1:8000/">Home</a>
+        </div>
+    </body>
+</html>

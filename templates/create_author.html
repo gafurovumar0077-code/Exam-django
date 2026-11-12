@@ -1,58 +1,25 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static "style.css" %}">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "style.css" %}">
+    </head>
+    <body>
+        <div class="df">
+            <h1 class="as">Add author</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="text" name="firstname" placeholder="firstname">
+                <input type="text" name="lastname" placeholder="lastname">
+                <input type="number" name="age" placeholder="age">
+                <button class="bt" type="submit">Save</button>
+                <a class="bt" href="http://127.0.0.1:8000/">Home</a>
 
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="text" name="firstname" placeholder="firstname">
-    <input type="text" name="lastname" placeholder="caption">
-    <input type="number" name="age" placeholder="age">
-    <button type="submit">Save</button>
-</form>
-
-</body>
+            </form>
+        </div>
+    </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

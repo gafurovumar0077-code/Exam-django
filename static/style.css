@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(33, 15, 0);
+    margin: auto;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(20, 118, 151);
+}
+.as{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+input, select{
+    padding: 20px;
+    margin: 0px 20px 40px;
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+input{
+    width: 240px;
+}
+select{
+    width: 280px;
+}
+.in{
+    width: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.bt{
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px;
+    border-radius: 40px;
+    border: none;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bt:hover{
+    background-color: bisque;
+    box-shadow: 0px 0px 15px rgb(33, 15, 0);
+}
+.rw{
+    text-decoration: none;
+    color: black;
+}
+.df{
+    width: 90%;
+    margin: auto;
+    margin-top: 220px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 3px solid rgb(85, 81, 81);
+    border-radius: 50px;
+    background-color: rgb(215, 203, 189);
+    font-size: 10px;
+    box-shadow: 0px 5px 15px rgb(84, 81, 79);
+}
+.fr{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid rgb(85, 81, 81);
+    border-radius: 50px;
+    background-color: rgb(215, 203, 189);
+    font-size: 10px;
+    box-shadow: 0px 5px 15px rgb(84, 81, 79);
+}
+.fr h1{
+    margin: 12px 0px;
+}
+.az{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.di{
+    width: 90%;
+    margin: 30px auto;
+}
+.ds{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.ds div{
+    max-width: 700px;
+}
+
+.ds img{
+    border-radius: 25px;
+}
+
+.fd{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 20px 40px;
+}
+
+.fd label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.fd input, .fd select{
+    margin: 0px;
+}

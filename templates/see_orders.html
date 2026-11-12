@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <title>Orders</title>
+    </head>
+    <body>
+        <h1 class="as">Orders</h1>
+        {% for order in orders %}
+            <div class="fr">
+                <div>
+                    <h1>Order: {{order.id}}</h1>
+                    <h1>Username: {{order.username}}</h1>
+                    <h1>Phone: {{order.phone}}</h1>
+                    <h1>Book: {{order.books.book_name}}</h1>
+                    <h1>Get at: {{order.get_at}}</h1>
+                    <h1>Bring at: {{order.bring_at}}</h1>
+                </div>
+                <div class="az">
+                    <a class="bt" href="http://127.0.0.1:8000/update_order/{{order.id}}/">Update</a>
+                    <a class="bt" href="http://127.0.0.1:8000/delete_order/{{order.id}}/">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="di">
+            <a class="bt" href="http://127.0.0.1:8000/">Home</a>
+        </div>
+    </body>
+</html>
